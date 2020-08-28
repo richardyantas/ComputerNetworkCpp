@@ -1,8 +1,8 @@
-// gcc server.c -o server
+// g++ serverOnFile.cpp -I/usr/include/conn -o out -lmysqlcppconn
 // #include <iostream.h>
 
-//#include <iostream>
-#include <stdio.h> 
+#include <iostream>
+#include <cstdio> 
 
 #include <netdb.h> 
 #include <netinet/in.h> 
@@ -11,13 +11,21 @@
 #include <sys/socket.h> 
 #include <sys/types.h> 
 
-/*
+#include <stdlib.h> // ??
+#include <unistd.h>
+#include <netinet/in.h>
+#include <fcntl.h>
+#include <netdb.h>
+#include <arpa/inet.h>
+#include <sys/ioctl.h>
+#include <sys/un.h>
+
+
 #include <cppconn/driver.h>
 #include <cppconn/exception.h>
 #include <cppconn/resultset.h>
 #include <cppconn/statement.h>
 
-*/
 #define MAX 80 
 #define PORT 8080 
 #define SA struct sockaddr 
@@ -35,7 +43,9 @@ void func(int sockfd)
   
         // read the message from client and copy it in buffer 
         //read(sockfd, buff, sizeof(buff)); 
-        read(sockfd, buff, sizeof(buff)); 
+        //recv(sockfd, buff, sizeof(buff)); 
+        int len = (int)strlen(buff);
+        int a  = (int)recv(sockfd, buff, len-1, 0);
         
         // print buffer which contains the client contents 
         printf("From client: %s\t To client : ", buff); 
@@ -47,7 +57,9 @@ void func(int sockfd)
   
         // and send that buffer to client 
         //write(sockfd, buff, sizeof(buff)); 
-        write(sockfd, buff, sizeof(buff)); 
+        //send(sockfd, buff, sizeof(buff)); 
+        int len2 = (int)strlen(buff);
+        int status = (int)send(sockfd, buff, len2, 0);
   
         // if msg contains "Exit" then server exit and chat ended. 
         if (strncmp("exit", buff, 4) == 0) { 
@@ -94,10 +106,22 @@ int main()
     } 
     else
         printf("Server listening..\n"); 
-    len = sizeof(cli); 
+    socklen_t len3 = sizeof(cli); 
+  
+
+    /*
+    struct sockaddr_storage their_addr;
+    socklen_t addr_size;
+    addr_size = sizeof their_addr;
+    int newsock = ::accept(sock, (struct sockaddr *)&their_addr, &addr_size);
+    if (newsock < 0) {
+        //exit(1);
+        cerr << "accept error: " << gai_strerror(errno) << endl;
+    }
+    */
   
     // Accept the data packet from client and verification 
-    connfd = accept(sockfd, (SA*)&cli, &len); 
+    connfd = ::accept(sockfd, (SA*)&cli, &len3); 
     if (connfd < 0) { 
         printf("server acccept failed...\n"); 
         exit(0); 
@@ -109,7 +133,7 @@ int main()
     func(connfd); 
   
     // After chatting close the socket 
-    close(sockfd); 
+    ::close(sockfd); 
 
     return 0;
 } 

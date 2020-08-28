@@ -78,4 +78,56 @@ https://github.com/bskari/mysql-cpp
 
 
 
+MYSQL CONNECTOR C++/
+sudo apt install libmysqlcppconn-dev
+
+/usr/lib/x86_64-linux-gnu/libmysqlcppconn.so
+
+
+
+find /path -name "*name*"
+
+para buscar keywords, version, libraries on folders/files
+
+grep *word_on_files* /path 
+grep -i *word_on_files* /path 
+
+
+
+grep -i *cpp*  (find /usr/ -name "*cmake*")
+
+|  beside right to the left shift  + alt 2nd right
+
+
+dpkg --list | grep hto
+dpkg --list | grep htops
+dpkg --list | grep htosdsds
+
+dpkg --help | grep list
+
+dpkg --list *cpp*
+
+dpkg --search *cppconn*
+
+cmake --help-module-list | grep test
+
+grep -i 'hello world' menu.h main.c
+
+grep --help
+
+In this case ignore case(uppercase and lowercase)
+
+cmake --help-module-list | grep -i test
+
+dpkg --list | grep kazam
+
+
+/etc/apt/sources.d/
+
+kazam.list
+
+
+
+
+
 

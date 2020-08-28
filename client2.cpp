@@ -1,13 +1,28 @@
-// gcc client.c -o client
-
+#include <iostream>
+#include <cstdio> 
 
 #include <netdb.h> 
-#include <stdio.h> 
+#include <netinet/in.h> 
 #include <stdlib.h> 
 #include <string.h> 
 #include <sys/socket.h> 
+#include <sys/types.h> 
 
-#include <mysql/jdbc.h>
+#include <stdlib.h> // ??
+#include <unistd.h>
+#include <netinet/in.h>
+#include <fcntl.h>
+#include <netdb.h>
+#include <arpa/inet.h>
+#include <sys/ioctl.h>
+#include <sys/un.h>
+
+
+#include <cppconn/driver.h>
+#include <cppconn/exception.h>
+#include <cppconn/resultset.h>
+#include <cppconn/statement.h>
+
 
 #define MAX 80 
 #define PORT 8080 
@@ -22,9 +37,16 @@ void func(int sockfd)
         n = 0; 
         while ((buff[n++] = getchar()) != '\n') 
             ; 
-        write(sockfd, buff, sizeof(buff)); 
+        //write(sockfd, buff, sizeof(buff)); 
+        int len2 = (int)strlen(buff);
+        int status = (int)send(sockfd, buff, len2, 0);
+
         bzero(buff, sizeof(buff)); 
-        read(sockfd, buff, sizeof(buff)); 
+        
+        //read(sockfd, buff, sizeof(buff)); 
+        int len = (int)strlen(buff);
+        int a  = (int)recv(sockfd, buff, len-1, 0);
+
         printf("From Server : %s", buff); 
         if ((strncmp(buff, "exit", 4)) == 0) { 
             printf("Client Exit...\n"); 
@@ -65,5 +87,5 @@ int main()
     func(sockfd); 
   
     // close the socket 
-    close(sockfd); 
+    ::close(sockfd); 
 } 

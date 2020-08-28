@@ -1,0 +1,8 @@
+cmake_minimum_required(VERSION 2.6)
+set( ${CPPCONINC} /usr/include/conn  )
+set( ${CPPCONLIB} /usr/lib/x86_64-linux-gnu/libmysqlcppconn.so )
+include_directories( ${CPPCONINC} )
+add_executable(server server2.cpp Socket2.cpp )
+add_executable(client client2.cpp Socket2.cpp )
+target_link_libraries(server ${CPPCONLIB})
+target_link_libraries(client ${CPPCONLIB})
