@@ -20,7 +20,6 @@
 #include <sys/ioctl.h>
 #include <sys/un.h>
 
-
 #include <cppconn/driver.h>
 #include <cppconn/exception.h>
 #include <cppconn/resultset.h>
@@ -98,7 +97,7 @@ int main()
     } 
     else
         printf("Socket successfully binded..\n"); 
-  
+    
     // Now server is ready to listen and verification 
     if ((listen(sockfd, 5)) != 0) { 
         printf("Listen failed...\n"); 
@@ -106,9 +105,9 @@ int main()
     } 
     else
         printf("Server listening..\n"); 
-    socklen_t len3 = sizeof(cli); 
-  
 
+        
+    socklen_t len3 = sizeof(cli); 
     /*
     struct sockaddr_storage their_addr;
     socklen_t addr_size;
