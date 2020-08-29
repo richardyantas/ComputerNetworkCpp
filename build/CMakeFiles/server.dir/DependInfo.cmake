@@ -4,13 +4,13 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/serendipita/Documents/ComputerNetworkCpp/Socket.cpp" "/home/serendipita/Documents/ComputerNetworkCpp/build/CMakeFiles/server.dir/Socket.cpp.o"
-  "/home/serendipita/Documents/ComputerNetworkCpp/server.cpp" "/home/serendipita/Documents/ComputerNetworkCpp/build/CMakeFiles/server.dir/server.cpp.o"
+  "/home/serendipita/Documents/ComputerNetworkCpp/engine/server.cpp" "/home/serendipita/Documents/ComputerNetworkCpp/build/CMakeFiles/server.dir/engine/server.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
+  ".././engine"
   )
 
 # Targets to which this target links.

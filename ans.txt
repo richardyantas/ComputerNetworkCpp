@@ -1,0 +1,42 @@
+#include <iostream>
+#include <cstdio> 
+
+#include <netdb.h> 
+#include <netinet/in.h> 
+#include <stdlib.h> 
+#include <string.h> 
+#include <sys/socket.h> 
+#include <sys/types.h> 
+
+#include <stdlib.h> // ??
+#include <unistd.h>
+#include <netinet/in.h>
+#include <fcntl.h>
+#include <netdb.h>
+#include <arpa/inet.h>
+#include <sys/ioctl.h>
+#include <sys/un.h>
+
+
+using namespace std;
+
+
+
+void foo(char* c)
+{
+  char ans;
+  int n = 0;
+  while ( putchar(*(c+n)) != '\n')n++;
+  //cout << "Buff: " << c << endl;
+}
+
+int main() {
+  
+  char buff[4];
+  int n = 0;
+  bzero(buff,sizeof(buff));
+  while ((buff[n++] = getchar()) != '\n');
+  
+  foo(buff);
+  return 0; 
+}

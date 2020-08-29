@@ -57,67 +57,41 @@ include CMakeFiles/server.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/server.dir/flags.make
 
-CMakeFiles/server.dir/server.cpp.o: CMakeFiles/server.dir/flags.make
-CMakeFiles/server.dir/server.cpp.o: ../server.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/serendipita/Documents/ComputerNetworkCpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/server.dir/server.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/server.dir/server.cpp.o -c /home/serendipita/Documents/ComputerNetworkCpp/server.cpp
+CMakeFiles/server.dir/engine/server.cpp.o: CMakeFiles/server.dir/flags.make
+CMakeFiles/server.dir/engine/server.cpp.o: ../engine/server.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/serendipita/Documents/ComputerNetworkCpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/server.dir/engine/server.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/server.dir/engine/server.cpp.o -c /home/serendipita/Documents/ComputerNetworkCpp/engine/server.cpp
 
-CMakeFiles/server.dir/server.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/server.dir/server.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/serendipita/Documents/ComputerNetworkCpp/server.cpp > CMakeFiles/server.dir/server.cpp.i
+CMakeFiles/server.dir/engine/server.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/server.dir/engine/server.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/serendipita/Documents/ComputerNetworkCpp/engine/server.cpp > CMakeFiles/server.dir/engine/server.cpp.i
 
-CMakeFiles/server.dir/server.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/server.dir/server.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/serendipita/Documents/ComputerNetworkCpp/server.cpp -o CMakeFiles/server.dir/server.cpp.s
+CMakeFiles/server.dir/engine/server.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/server.dir/engine/server.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/serendipita/Documents/ComputerNetworkCpp/engine/server.cpp -o CMakeFiles/server.dir/engine/server.cpp.s
 
-CMakeFiles/server.dir/server.cpp.o.requires:
+CMakeFiles/server.dir/engine/server.cpp.o.requires:
 
-.PHONY : CMakeFiles/server.dir/server.cpp.o.requires
+.PHONY : CMakeFiles/server.dir/engine/server.cpp.o.requires
 
-CMakeFiles/server.dir/server.cpp.o.provides: CMakeFiles/server.dir/server.cpp.o.requires
-	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server.cpp.o.provides.build
-.PHONY : CMakeFiles/server.dir/server.cpp.o.provides
+CMakeFiles/server.dir/engine/server.cpp.o.provides: CMakeFiles/server.dir/engine/server.cpp.o.requires
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/engine/server.cpp.o.provides.build
+.PHONY : CMakeFiles/server.dir/engine/server.cpp.o.provides
 
-CMakeFiles/server.dir/server.cpp.o.provides.build: CMakeFiles/server.dir/server.cpp.o
-
-
-CMakeFiles/server.dir/Socket.cpp.o: CMakeFiles/server.dir/flags.make
-CMakeFiles/server.dir/Socket.cpp.o: ../Socket.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/serendipita/Documents/ComputerNetworkCpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/server.dir/Socket.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/server.dir/Socket.cpp.o -c /home/serendipita/Documents/ComputerNetworkCpp/Socket.cpp
-
-CMakeFiles/server.dir/Socket.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/server.dir/Socket.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/serendipita/Documents/ComputerNetworkCpp/Socket.cpp > CMakeFiles/server.dir/Socket.cpp.i
-
-CMakeFiles/server.dir/Socket.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/server.dir/Socket.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/serendipita/Documents/ComputerNetworkCpp/Socket.cpp -o CMakeFiles/server.dir/Socket.cpp.s
-
-CMakeFiles/server.dir/Socket.cpp.o.requires:
-
-.PHONY : CMakeFiles/server.dir/Socket.cpp.o.requires
-
-CMakeFiles/server.dir/Socket.cpp.o.provides: CMakeFiles/server.dir/Socket.cpp.o.requires
-	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/Socket.cpp.o.provides.build
-.PHONY : CMakeFiles/server.dir/Socket.cpp.o.provides
-
-CMakeFiles/server.dir/Socket.cpp.o.provides.build: CMakeFiles/server.dir/Socket.cpp.o
+CMakeFiles/server.dir/engine/server.cpp.o.provides.build: CMakeFiles/server.dir/engine/server.cpp.o
 
 
 # Object files for target server
 server_OBJECTS = \
-"CMakeFiles/server.dir/server.cpp.o" \
-"CMakeFiles/server.dir/Socket.cpp.o"
+"CMakeFiles/server.dir/engine/server.cpp.o"
 
 # External object files for target server
 server_EXTERNAL_OBJECTS =
 
-server: CMakeFiles/server.dir/server.cpp.o
-server: CMakeFiles/server.dir/Socket.cpp.o
+server: CMakeFiles/server.dir/engine/server.cpp.o
 server: CMakeFiles/server.dir/build.make
 server: CMakeFiles/server.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/serendipita/Documents/ComputerNetworkCpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable server"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/serendipita/Documents/ComputerNetworkCpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable server"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/server.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -125,8 +99,7 @@ CMakeFiles/server.dir/build: server
 
 .PHONY : CMakeFiles/server.dir/build
 
-CMakeFiles/server.dir/requires: CMakeFiles/server.dir/server.cpp.o.requires
-CMakeFiles/server.dir/requires: CMakeFiles/server.dir/Socket.cpp.o.requires
+CMakeFiles/server.dir/requires: CMakeFiles/server.dir/engine/server.cpp.o.requires
 
 .PHONY : CMakeFiles/server.dir/requires
 

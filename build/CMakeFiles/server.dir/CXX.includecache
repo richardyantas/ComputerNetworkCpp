@@ -6,24 +6,26 @@
 
 #IncludeRegexTransform: 
 
-/home/serendipita/Documents/ComputerNetworkCpp/Socket.cpp
-Socket.h
-/home/serendipita/Documents/ComputerNetworkCpp/Socket.h
-
-/home/serendipita/Documents/ComputerNetworkCpp/Socket.h
+/home/serendipita/Documents/ComputerNetworkCpp/server.cpp
 iostream
 -
-stdlib.h
+socket.h
+/home/serendipita/Documents/ComputerNetworkCpp/socket.h
+
+/home/serendipita/Documents/ComputerNetworkCpp/socket.h
+iostream
+-
+cstdio
 -
 string.h
 -
-unistd.h
+sys/socket.h
 -
 sys/types.h
 -
-sys/socket.h
+stdlib.h
 -
-sys/ioctl.h
+unistd.h
 -
 netinet/in.h
 -
@@ -33,15 +35,9 @@ netdb.h
 -
 arpa/inet.h
 -
-vector
+sys/ioctl.h
 -
 sys/un.h
--
-errno.h
--
-
-/home/serendipita/Documents/ComputerNetworkCpp/server.cpp
-iostream
 -
 cppconn/driver.h
 -
@@ -51,6 +47,4 @@ cppconn/resultset.h
 -
 cppconn/statement.h
 -
-Socket.h
-/home/serendipita/Documents/ComputerNetworkCpp/Socket.h
 
